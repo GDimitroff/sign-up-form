@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-hero {
+  background-image: url(../images/prateek-katyal-Tl0lYXcyT-A-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 40vw;
+}
