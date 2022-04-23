@@ -1,9 +1,27 @@
+:root {
+  --text-color: #fafafa;
+  --text-color-alternative: #d4d4d8;
+  --background-color: #18181b;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-color);
 }
 
 .main {
@@ -13,8 +31,43 @@
 }
 
 .section-hero {
+  position: relative;
   background-image: url(../images/prateek-katyal-Tl0lYXcyT-A-unsplash.jpg);
   background-position: center;
   background-size: cover;
   width: 40vw;
+}
+
+.section-hero--header {
+  position: relative;
+  top: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2.2rem 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.section-hero--header > img {
+  width: 15%;
+}
+
+.section-hero--credits {
+  position: absolute;
+  font-size: 1.2rem;
+  color: var(--text-color-alternative);
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  background-color: var(--background-color);
 }
