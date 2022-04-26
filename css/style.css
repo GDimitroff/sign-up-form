@@ -1,6 +1,6 @@
 :root {
   --text-color: #fafafa;
-  --text-color-alternative: #d4d4d8;
+  --poem-color: #d7a86e;
   --background-color: #18181b;
 }
 
@@ -36,31 +36,78 @@ body {
   background-position: center;
   background-size: cover;
   width: 40vw;
-}
-
-.section-hero--header {
-  position: relative;
-  top: 20%;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-
-  padding: 2.2rem 0;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.section-hero--header > img {
-  width: 15%;
+.poem {
+  width: 430px;
+  font-size: 1.6rem;
+  text-align: left;
+  padding: 1.5rem 3rem;
+  background-color: #18181be3;
+  border-radius: 2px;
+  color: var(--poem-color);
+  box-shadow: 3px 3px 0 0 var(--poem-color);
+}
+
+.poem p {
+  line-height: 1.5;
+}
+
+.poem p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.poem h1,
+.poem h2 {
+  font-weight: normal;
+  text-align: center;
+}
+
+.poem h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.poem h2 {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.poem h2 + p:first-letter {
+  float: left;
+  font-size: 200%;
+  padding: 6px;
+  margin: 4px 12px 0 0;
+  background-color: var(--background-color);
+  box-shadow: 3px 3px 0 var(--poem-color);
+  border-radius: 2px;
+}
+
+.poem p:first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.1rem;
+}
+
+.poem h2:before {
+  content: '— ';
+}
+
+.poem h2:after {
+  content: ' —';
 }
 
 .section-hero--credits {
   position: absolute;
-  font-size: 1.2rem;
-  color: var(--text-color-alternative);
-  bottom: 2rem;
+  bottom: 1rem;
   right: 2rem;
+
+  font-size: 1.2rem;
+  color: var(--poem-color);
 }
 
 .section-form {
