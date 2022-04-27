@@ -1,7 +1,7 @@
 :root {
   --text-color: #dfdfde;
-  --poem-color: #d7a86e;
   --background-color: #18181b;
+  --light-brown-color: #d7a86e;
 }
 
 *,
@@ -53,7 +53,7 @@ body {
 .icon {
   grid-row: span 2;
   font-size: 4.8rem;
-  color: var(--poem-color);
+  color: var(--light-brown-color);
 }
 
 .section-hero--header h1 {
@@ -64,79 +64,19 @@ body {
   font-size: 2.2rem;
 }
 
-.poem {
-  width: 430px;
-  font-size: 1.6rem;
-  text-align: left;
-  padding: 1.5rem 3rem;
-  background-color: #18181be3;
-  border-radius: 2px;
-  color: var(--poem-color);
-  box-shadow: 3px 3px 0 0 var(--poem-color);
-}
-
-.poem p {
-  line-height: 1.5;
-}
-
-.poem p:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-.poem h1,
-.poem h2 {
-  font-weight: normal;
-  text-align: center;
-}
-
-.poem h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-}
-
-.poem h2 {
-  font-size: 1.4rem;
-  font-style: italic;
-  margin-bottom: 3rem;
-}
-
-.poem h2 + p:first-letter {
-  float: left;
-  font-size: 200%;
-  padding: 6px;
-  margin: 4px 12px 0 0;
-  background-color: var(--background-color);
-  box-shadow: 3px 3px 0 var(--poem-color);
-  border-radius: 2px;
-}
-
-.poem p:first-line {
-  font-variant: small-caps;
-  letter-spacing: 0.1rem;
-}
-
-.poem h2:before {
-  content: '— ';
-}
-
-.poem h2:after {
-  content: ' —';
-}
-
 .section-hero--credits {
   position: absolute;
+  left: 50%;
   bottom: 1rem;
-  right: 2rem;
+  transform: translate(-50%);
 
   font-size: 1.2rem;
-  color: var(--poem-color);
+  color: var(--text-color);
 }
 
 .section-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   width: 60vw;
+  display: flex;
   background-color: var(--background-color);
-  padding: 10rem 20rem;
+  padding: 10rem;
 }
