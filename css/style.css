@@ -1,5 +1,5 @@
 :root {
-  --text-color: #fafafa;
+  --text-color: #dfdfde;
   --poem-color: #d7a86e;
   --background-color: #18181b;
 }
@@ -36,10 +36,32 @@ body {
   background-position: center;
   background-size: cover;
   width: 40vw;
+}
 
-  display: flex;
+.section-hero--header {
+  position: relative;
+  top: 20vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60px auto;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5rem 0;
+}
+
+.icon {
+  grid-row: span 2;
+  font-size: 4.8rem;
+  color: var(--poem-color);
+}
+
+.section-hero--header h1 {
+  margin: 0;
+}
+
+.section-hero--header p {
+  font-size: 2.2rem;
 }
 
 .poem {
@@ -113,8 +135,8 @@ body {
 .section-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   width: 60vw;
   background-color: var(--background-color);
+  padding: 10rem 20rem;
 }

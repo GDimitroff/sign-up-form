@@ -12,12 +12,28 @@
     />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/54ad0d43c6.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Sign-up form</title>
   </head>
   <body>
     <main class="main">
       <section class="section-hero">
-        <div class="poem">
+        <header class="section-hero--header">
+          <i class="fa-solid fa-book-bookmark icon"></i>
+          <h1>Dead Poets Society</h1>
+          <p>When a good book ends, the conversation begins.</p>
+        </header>
+
+        <div class="section-hero--credits">
+          <p>Photo by Prateek Katyal</p>
+        </div>
+      </section>
+
+      <section class="section-form">
+        <!-- <div class="poem">
           <h1>Do not go gentle into that good night</h1>
           <h2>Dylan Thomas</h2>
 
@@ -52,57 +68,45 @@
             Do not go gentle into that good night. <br />
             Rage, rage against the dying of the light.
           </p>
-        </blockquote>
-
-        <div class="section-hero--credits">
-          <p>Photo by Prateek Katyal</p>
-        </div>
-      </section>
-
-      <section class="section-form">
-        <header class="section-form--header">
-    
-          <!-- <img src="./images/books.png" alt="" /> -->
-          <h1>Dead Poets Society</h1>
-
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
-            asperiores dolorum ad soluta aliquam libero facere culpa nihil autem
-            accusamus!
-          </p>
-          <p>Sign up now to get started.</p>
-          <p>You know you want to.</p>
-        </header>
+        </div> -->
+        <p>
+          We take reading beyond the page, connecting you to authors and reader
+          communities with conversations and cinematic content.
+        </p>
 
         <form action="#" method="post">
-          <h1>Let's do this!</h1>
+          <h2>Tell Us About Yourself</h2>
+          <p>
+            Welcome, fellow book lover. Good to see you. Let’s get started by
+            setting up your account.
+          </p>
 
-          <div>
+          <div class="input">
             <label for="first-name">First name</label>
             <input type="text" name="first-name" id="first-name" required />
           </div>
 
-          <div>
+          <div class="input">
             <label for="last-name">Last name</label>
             <input type="text" name="last-name" id="last-name" required />
           </div>
 
-          <div>
+          <div class="input">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required />
           </div>
 
-          <div>
+          <div class="input">
             <label for="phone-number">Phone number</label>
             <input type="tel" name="phone-number" id="phone-number" />
           </div>
 
-          <div>
+          <div class="input">
             <label for="password">Password</label>
             <input type="password" name="password" id="password" required />
           </div>
 
-          <div>
+          <div class="input">
             <label for="confirm-password">Confirm password</label>
             <input
               type="password"
