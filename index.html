@@ -33,55 +33,66 @@
       </section>
 
       <section class="section-form">
-        <p>
-          We take reading beyond the page, connecting you to authors and reader
-          communities with conversations and cinematic content.
-        </p>
+        <div class="form-wrapper">
+          <h1>Tell Us About Yourself</h1>
 
-        <form action="#" method="post">
-          <h2>Tell Us About Yourself</h2>
           <p>
-            Welcome, fellow book lover. Good to see you. Let’s get started by
-            setting up your account.
+            Welcome, fellow book lover. Good to see you. We take reading beyond
+            the page, connecting you to authors and reader communities with
+            conversations and cinematic content.
           </p>
 
-          <div class="input">
-            <label for="first-name">First name</label>
-            <input type="text" name="first-name" id="first-name" required />
-          </div>
+          <p>Let’s get started by setting up your account.</p>
 
-          <div class="input">
-            <label for="last-name">Last name</label>
-            <input type="text" name="last-name" id="last-name" required />
-          </div>
+          <form class="form">
+            <ul>
+              <li>
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required />
+                <span>Enter your full name here</span>
+              </li>
 
-          <div class="input">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
+              <li>
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required />
+                <span>Enter your full name here</span>
+              </li>
 
-          <div class="input">
-            <label for="phone-number">Phone number</label>
-            <input type="tel" name="phone-number" id="phone-number" />
-          </div>
+              <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+                <span>Enter a valid email address</span>
+              </li>
 
-          <div class="input">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required />
-          </div>
+              <li>
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" name="phone-number" id="phone-number" />
+                <span>Your phone number</span>
+              </li>
 
-          <div class="input">
-            <label for="confirm-password">Confirm password</label>
-            <input
-              type="password"
-              name="confirm-password"
-              id="confirm-password"
-              required
-            />
-          </div>
+              <li>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" />
+                <span>Your password</span>
+              </li>
 
-          <button type="submit">Create Account</button>
-        </form>
+              <li>
+                <label for="confirm-password">Confirm password</label>
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  required
+                />
+                <span>Confirm your password</span>
+              </li>
+
+              <li>
+                <input type="submit" value="Create Account" />
+              </li>
+            </ul>
+          </form>
+        </div>
       </section>
     </main>
   </body>
