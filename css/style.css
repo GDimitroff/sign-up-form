@@ -1,6 +1,8 @@
 :root {
   --text-color: #d3e0ea;
   --background-color: #18181b;
+  --main-color: #856c43;
+  --alternative-color: #a9966d;
 }
 
 *,
@@ -86,14 +88,19 @@ body {
 }
 
 .form-wrapper p {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+
+.form-description {
+  border-bottom: 3px solid var(--main-color);
+  margin-bottom: 3rem;
 }
 
 .form ul {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
+  gap: 3rem 0.8rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -107,9 +114,8 @@ body {
 .form li {
   display: block;
   padding: 9px;
-  border: 1px solid #dddddd;
-  margin-bottom: 30px;
-  border-radius: 3px;
+  border: 1px solid var(--main-color);
+  border-radius: 2px;
 }
 
 .form li:last-child {
@@ -122,6 +128,7 @@ body {
   display: block;
   float: left;
   margin-top: -19px;
+  margin-left: -5px;
   background: var(--background-color);
   height: 14px;
   padding: 2px 5px 2px 5px;
@@ -129,6 +136,7 @@ body {
   font-size: 14px;
   overflow: hidden;
 }
+
 .form input[type='text'],
 .form input[type='tel'],
 .form input[type='email'],
@@ -145,34 +153,53 @@ body {
   background-color: var(--background-color);
 }
 
-.form input[type='text']:focus,
-.form input[type='email']:focus,
-.form input[type='tel']:focus,
-.form input[type='password']:focus {
+.form li:focus-within:not(:last-child) {
+  border: 1px solid var(--alternative-color);
+}
+
+.form li > input:focus + span {
+  background: var(--alternative-color);
 }
 
 .form li > span {
-  background: var(--text-color);
+  background: var(--main-color);
+  color: var(--text-color);
   display: block;
   padding: 3px;
   margin: 0 -9px -9px -9px;
   text-align: center;
-  color: var(--background-color);
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
 }
 
 .form input[type='submit'] {
+  width: 50%;
   cursor: pointer;
-  background: peachpuff;
+  background: var(--alternative-color);
   border: none;
   padding: 10px 20px 10px 20px;
-  border-bottom: 3px solid burlywood;
-  border-radius: 3px;
+  border-bottom: 3px solid var(--main-color);
+  border-radius: 2px;
   color: #18181b;
 }
 
 .form input[type='submit']:hover {
-  background: burlywood;
-  color: #fff;
+  background: var(--main-color);
+  border-bottom: 3px solid var(--alternative-color);
+  color: var(--text-color);
+}
+
+.form input[type='submit']:focus {
+  outline: none;
+  background: var(--main-color);
+  border-bottom: 3px solid var(--alternative-color);
+  color: var(--text-color);
+}
+
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover,
+.form input:-webkit-autofill:focus,
+.form input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px var(--background-color) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--background-color) inset !important;
+  -webkit-text-fill-color: var(--text-color) !important;
 }

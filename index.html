@@ -34,13 +34,14 @@
 
       <section class="section-form">
         <div class="form-wrapper">
-          <h1>Tell Us About Yourself</h1>
-
-          <p>
-            Welcome, fellow book lover. Good to see you. We take reading beyond
-            the page, connecting you to authors and reader communities with
-            conversations and cinematic content.
-          </p>
+          <div class="form-description">
+            <h1>Tell Us About Yourself</h1>
+            <p>
+              Welcome, fellow book lover. Good to see you. We take reading
+              beyond the page, connecting you to authors and reader communities
+              with conversations and cinematic content.
+            </p>
+          </div>
 
           <p>Let’s get started by setting up your account.</p>
 
@@ -48,32 +49,54 @@
             <ul>
               <li>
                 <label for="first-name">First Name</label>
-                <input type="text" name="first-name" id="first-name" required />
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  required
+                  placeholder="John"
+                />
                 <span>Enter your full name here</span>
               </li>
 
               <li>
                 <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" id="last-name" required />
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  required
+                  placeholder="Doe"
+                />
                 <span>Enter your full name here</span>
               </li>
 
               <li>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@example.com"
+                />
                 <span>Enter a valid email address</span>
               </li>
 
               <li>
                 <label for="phone-number">Phone Number</label>
-                <input type="tel" name="phone-number" id="phone-number" />
-                <span>Your phone number</span>
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  placeholder="123 456 789"
+                />
+                <span>Enter your phone number</span>
               </li>
 
               <li>
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" />
-                <span>Your password</span>
+                <span>Enter your password</span>
               </li>
 
               <li>
