@@ -77,6 +77,7 @@
                   type="email"
                   name="email"
                   id="email"
+                  required
                   placeholder="example@example.com"
                 />
                 <span>Enter a valid email address</span>
@@ -95,7 +96,14 @@
 
               <li>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder=" "
+                  required
+                  autocomplete="new-password"
+                />
                 <span>Enter your password</span>
               </li>
 
@@ -106,6 +114,7 @@
                   name="confirm-password"
                   id="confirm-password"
                   required
+                  placeholder=" "
                 />
                 <span>Confirm your password</span>
               </li>
