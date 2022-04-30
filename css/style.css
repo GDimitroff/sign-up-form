@@ -208,8 +208,8 @@ body {
 .form input:-webkit-autofill:hover,
 .form input:-webkit-autofill:focus,
 .form input:-webkit-autofill:active {
-  box-shadow: 0 0 0 30px var(--primary-dark) inset !important;
-  -webkit-box-shadow: 0 0 0 30px var(--primary-dark) inset !important;
+  box-shadow: 0 0 0 30px var(--secondary-dark) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--secondary-dark) inset !important;
   -webkit-text-fill-color: var(--primary-light) !important;
 }
 
@@ -223,4 +223,27 @@ body {
 .form input:not(:focus):not(:placeholder-shown):invalid + span {
   background: #6a040f;
   color: var(--primary-light);
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.login p {
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  color: var(--primary-light);
+  transition: 0.4s ease-in-out;
+}
+
+a:hover,
+a:active {
+  color: var(--secondary-light);
 }
