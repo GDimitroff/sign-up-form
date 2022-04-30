@@ -179,23 +179,26 @@ body {
 }
 
 .form input[type='submit'] {
+  display: flex;
+  justify-content: center;
   width: 50%;
   cursor: pointer;
-  background: var(--alternative-color);
+  background: transparent;
   border: none;
   padding: 10px 20px 10px 20px;
-  border-bottom: 3px solid var(--primary-light);
+  border: 2px solid var(--primary-light);
+  background-color: var(--secondary-dark);
   border-radius: 2px;
   color: var(--primary-light);
   transition: 0.4s ease-in-out;
+  font-size: 1.4rem;
 }
 
 .form input[type='submit']:focus,
 .form input[type='submit']:hover {
   outline: none;
   background: var(--primary-light);
-  border-bottom: 3px solid var(--alternative-color);
-  color: var(--primary-light);
+  color: var(--primary-dark);
 }
 
 .form input:-webkit-autofill,
