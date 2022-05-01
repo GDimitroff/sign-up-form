@@ -3,6 +3,9 @@
   --secondary-light: #adb5bd;
   --primary-dark: #18181b;
   --secondary-dark: #212529;
+
+  --valid-color: #004b23;
+  --invalid-color: #6a040f;
 }
 
 *,
@@ -211,18 +214,6 @@ body {
   box-shadow: 0 0 0 30px var(--secondary-dark) inset !important;
   -webkit-box-shadow: 0 0 0 30px var(--secondary-dark) inset !important;
   -webkit-text-fill-color: var(--primary-light) !important;
-}
-
-.form input:required:valid + span,
-.form input:required:focus:valid + span {
-  background: #004b23;
-  color: var(--primary-light);
-}
-
-.form input:focus:not(:placeholder-shown):invalid + span,
-.form input:not(:focus):not(:placeholder-shown):invalid + span {
-  background: #6a040f;
-  color: var(--primary-light);
 }
 
 .login {
