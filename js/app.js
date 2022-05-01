@@ -3,7 +3,7 @@ const firstNameInput = form.querySelector('#first-name');
 const lastNameInput = form.querySelector('#last-name');
 const emailInput = form.querySelector('#email');
 const passwordInput = form.querySelector('#password');
-const repeatPasswordInput = form.querySelector('#confirm-password');
+const confirmPasswordInput = form.querySelector('#confirm-password');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -12,6 +12,8 @@ form.addEventListener('submit', (e) => {
 firstNameInput.addEventListener('input', handleInput);
 lastNameInput.addEventListener('input', handleInput);
 emailInput.addEventListener('input', handleEmail);
+passwordInput.addEventListener('input', handlePassword);
+confirmPasswordInput.addEventListener('input', handleConfirmPassword);
 
 function handleInput(e) {
   const spanName = form.querySelector(`#${e.target.id} + span`);
@@ -31,7 +33,7 @@ function handleInput(e) {
 function handleEmail(e) {
   const spanEmail = form.querySelector('#email + span');
 
-  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
   if (e.target.value.match(regex)) {
     spanEmail.innerHTML = '<i class="fa-solid fa-check"></i>';
     spanEmail.style.color = 'var(--primary-light)';
@@ -44,10 +46,24 @@ function handleEmail(e) {
   }
 }
 
-repeatPasswordInput.addEventListener('input', (e) => {
+function handlePassword(e) {
   const spanConfirmPassword = form.querySelector('#confirm-password + span');
 
-  if (passwordInput.value !== repeatPasswordInput.value) {
+  confirmPasswordInput.value = '';
+  spanConfirmPassword.textContent = 'Confirm your password';
+  spanConfirmPassword.style.color = 'var(--primary-light)';
+  spanConfirmPassword.style.backgroundColor = 'var(--invalid-color)';
+}
+
+function handleConfirmPassword(e) {
+  if (passwordInput.value.trim() === '') {
+    confirmPasswordInput.value = '';
+    return;
+  }
+
+  const spanConfirmPassword = form.querySelector('#confirm-password + span');
+
+  if (passwordInput.value !== confirmPasswordInput.value) {
     spanConfirmPassword.textContent = "Passwords don't match!";
     spanConfirmPassword.style.color = 'var(--primary-light)';
     spanConfirmPassword.style.backgroundColor = 'var(--invalid-color)';
@@ -55,4 +71,4 @@ repeatPasswordInput.addEventListener('input', (e) => {
     spanConfirmPassword.innerHTML = '<i class="fa-solid fa-check"></i>';
     spanConfirmPassword.style.backgroundColor = 'var(--valid-color)';
   }
-});
+}
