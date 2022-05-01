@@ -2,6 +2,7 @@ const form = document.querySelector('.form');
 const firstNameInput = form.querySelector('#first-name');
 const lastNameInput = form.querySelector('#last-name');
 const emailInput = form.querySelector('#email');
+const phoneInput = form.querySelector('#phone-number');
 const passwordInput = form.querySelector('#password');
 const confirmPasswordInput = form.querySelector('#confirm-password');
 
@@ -12,6 +13,7 @@ form.addEventListener('submit', (e) => {
 firstNameInput.addEventListener('input', handleInput);
 lastNameInput.addEventListener('input', handleInput);
 emailInput.addEventListener('input', handleEmail);
+phoneInput.addEventListener('input', handlePhone);
 passwordInput.addEventListener('input', handlePassword);
 confirmPasswordInput.addEventListener('input', handleConfirmPassword);
 
@@ -19,6 +21,7 @@ function handleInput(e) {
   const spanName = form.querySelector(`#${e.target.id} + span`);
 
   if (e.target.value.trim() === '') {
+    e.target.value = '';
     spanName.innerHTML =
       'Cannot be empty! <i class="fa-solid fa-triangle-exclamation"></i>';
     spanName.style.color = 'var(--primary-light)';
@@ -31,6 +34,10 @@ function handleInput(e) {
 }
 
 function handleEmail(e) {
+  if (emailInput.value.trim() === '') {
+    emailInput.value = '';
+  }
+
   const spanEmail = form.querySelector('#email + span');
 
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
@@ -43,6 +50,12 @@ function handleEmail(e) {
       'Invalid email! <i class="fa-solid fa-triangle-exclamation"></i>';
     spanEmail.style.color = 'var(--primary-light)';
     spanEmail.style.backgroundColor = 'var(--invalid-color)';
+  }
+}
+
+function handlePhone(e) {
+  if (phoneInput.value.trim() === '') {
+    phoneInput.value = '';
   }
 }
 
