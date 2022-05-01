@@ -54,7 +54,7 @@
 
   .section-hero {
     width: 100vw;
-    height: 15vh;
+    height: 15rem;
   }
 
   .section-hero--header {
@@ -65,11 +65,11 @@
   }
 
   .section-hero--header > h1 {
-    font-size: 2.8rem;
+    font-size: 4rem;
   }
 
   .icon {
-    font-size: 2.8rem;
+    font-size: 3.8rem;
   }
 
   .section-hero--header > p,
@@ -104,5 +104,19 @@
 
   .login {
     justify-content: center;
+  }
+}
+
+/************************************/
+/* BELOW 544px (Phones)             */
+/************************************/
+
+@media (max-width: 34em) {
+  .section-hero--header > h1 {
+    font-size: 3rem;
+  }
+
+  .icon {
+    font-size: 3rem;
   }
 }
